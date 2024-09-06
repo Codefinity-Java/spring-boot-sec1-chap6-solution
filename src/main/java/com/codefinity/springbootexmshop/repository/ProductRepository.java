@@ -21,7 +21,9 @@ public class ProductRepository {
     }
 
     public Product findByName(String name){
-        //TODO: Find `Product` by name in `products`
-        return null;
+        return products.stream()
+                .filter(product -> product.getName().equals(name))
+                .findFirst()
+                .orElse(null);
     }
 }

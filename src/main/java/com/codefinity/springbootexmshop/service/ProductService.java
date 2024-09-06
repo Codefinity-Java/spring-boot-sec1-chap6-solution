@@ -20,7 +20,6 @@ public class ProductService {
     }
 
     public Product getProductByName(String name){
-        //TODO: Implement the logic to get a `Product` by name from the repository
-        return null;
+        return productRepository.findByName(name);
     }
 }
